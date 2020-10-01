@@ -1,13 +1,10 @@
-//import React from 'react'; //not required as next.js does this for us
+// import React from 'react'; //not required as next.js does this for us
 
 import Link from 'next/link';
 
-const Home = props => (
+const Home = (props) => (
   <div>
     <p>Hey!</p>
-    <Link href="/sell">
-      <a>Sell!</a>
-    </Link>
   </div>
 );
 
