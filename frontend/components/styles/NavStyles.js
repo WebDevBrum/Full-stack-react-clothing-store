@@ -25,11 +25,11 @@ const NavStyles = styled.ul`
     &:before {
       content: '';
       width: 2px;
-      background: ${props => props.theme.lightgrey};
+      background: ${(props) => props.theme.lightgrey};
       height: 100%;
       left: 0;
       position: absolute;
-      transform: skew(-20deg);
+      transform: skew(-20deg); /* gives the angled lines */
       top: 0;
       bottom: 0;
     }
@@ -37,7 +37,7 @@ const NavStyles = styled.ul`
       height: 2px;
       background: red;
       content: '';
-      width: 0;
+      width: 0px;
       position: absolute;
       transform: translateX(-50%);
       transition: width 0.4s;
@@ -57,7 +57,7 @@ const NavStyles = styled.ul`
     }
   }
   @media (max-width: 1300px) {
-    border-top: 1px solid ${props => props.theme.lightgrey};
+    border-top: 1px solid ${(props) => props.theme.lightgrey};
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;

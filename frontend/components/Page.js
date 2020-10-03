@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-expressions */
 import React, { Component } from 'react';
-import styled, { ThemeProvider, InjectGlobal } from 'styled-components';
+import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import Header from './Header';
 import Meta from './Meta';
 
@@ -26,6 +27,35 @@ const Inner = styled.div`
 `;
 
 // So we want the header to go all the way across  but the Inner to  be constrained to a max width.
+
+injectGlobal`
+  @font-face {
+    font-family: 'radnika_next' ;
+    src: url(/static/radnikanext-medium-webfont.woff2)
+    format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 10px; /* sets the base */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem; /*can then easy calc from base */
+    line-height: 2;
+    font-family: 'radnika_next' ;
+  }
+  a {
+    text-decoration: none;
+    color: ${theme.black};
+    
+  }
+`;
 
 class Page extends Component {
   render() {
